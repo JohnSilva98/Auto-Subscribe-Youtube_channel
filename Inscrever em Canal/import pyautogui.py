@@ -1,6 +1,5 @@
 from tkinter import messagebox
 from PIL import ImageGrab
-from pytesseract import Output
 import pyautogui
 import time
 
