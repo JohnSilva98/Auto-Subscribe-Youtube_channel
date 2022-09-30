@@ -31,7 +31,7 @@ pyautogui.hotkey('ctrl', 't')
 pyautogui.write("www.youtube.com", interval=0.050)
 pyautogui.press('enter')
 time.sleep(5)
-btn_pesquisar = pyautogui.locateCenterOnScreen(r"pesquisar.png", confidence=0.9)
+btn_pesquisar = pyautogui.locateCenterOnScreen(r"pesquisar2.png", confidence=0.9)
 print("coord barra: ",btn_pesquisar)
 pyautogui.moveTo(btn_pesquisar)
 pyautogui.click()
@@ -50,14 +50,17 @@ print("coord logo:",elem)
 pyautogui.moveTo(elem)
 pyautogui.click()
 time.sleep(5)'''
+
+'''
+#acessar canal usando o sele de verificado como referencia
 ver = pyautogui.locateCenterOnScreen(r'Verificado.png', confidence=0.9)
 print("coord ver:", ver)
 pyautogui.moveTo(ver, duration=0.3)
 pyautogui.click()
 time.sleep(2)
-
+'''
 #se inscrever
-btn_inscrever = pyautogui.locateCenterOnScreen(r"inscrever.png", confidence=0.9)
+btn_inscrever = pyautogui.locateCenterOnScreen(r"inscrever2.png", confidence=0.9)
 print("coord inscrever:",btn_inscrever)
 pyautogui.moveTo(btn_inscrever)
 pyautogui.click()
