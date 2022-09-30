@@ -31,12 +31,12 @@ pyautogui.write(pesquisar, interval=0.025)
 pyautogui.press('enter')
 time.sleep(2)
 
-#acessar canal
-logo = pyautogui.locateCenterOnScreen(r"logocanaldark2.png", confidence=0.9)
-print("coord logo:",logo)
-pyautogui.moveTo(logo, duration=0.3)
+#acessar canal usando o selo de verificado como referencia
+ver = pyautogui.locateCenterOnScreen(r'Verificado.png', confidence=0.9)
+print("coord ver:", ver)
+pyautogui.moveTo(ver, duration=0.3)
 pyautogui.click()
-time.sleep(3)
+time.sleep(2)
 
 #se inscrever
 btn_inscrever = pyautogui.locateCenterOnScreen(r"inscrever2.png", confidence=0.9)

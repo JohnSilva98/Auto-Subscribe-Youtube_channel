@@ -23,14 +23,14 @@ driver = webdriver.Chrome()
 pesquisar = pyautogui.prompt(text="", title="Digite o nome do canal")
 # abrir nova guia
 time.sleep(1)
-pyautogui.moveTo(700, 16)
+pyautogui.moveTo(700, 26)
 pyautogui.click()
 pyautogui.hotkey('ctrl', 't')
 
 #pesquisar youtube
 pyautogui.write("www.youtube.com", interval=0.050)
 pyautogui.press('enter')
-time.sleep(7)
+time.sleep(5)
 btn_pesquisar = pyautogui.locateCenterOnScreen(r"pesquisar.png", confidence=0.9)
 print("coord barra: ",btn_pesquisar)
 pyautogui.moveTo(btn_pesquisar)
@@ -42,14 +42,19 @@ print(url)
 time.sleep(2)
 
 #acessar canal
-
-elem = driver.find_element(By.XPATH, "//*[@id='text']")
-#logo = pyautogui.locateCenterOnScreen(r"logocanaldark.png", confidence=0.9)
+'''
+driver.find_element(By.XPATH, '/html/body/ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-channel-renderer/div/div[2]/a/div[1]/ytd-channel-name/div/div/yt-formatted-string').click()
+logo = pyautogui.locateCenterOnScreen(r"logocanaldark.png", confidence=0.9)
 logo = pyautogui.locateCenterOnScreen(elem)
 print("coord logo:",elem)
 pyautogui.moveTo(elem)
 pyautogui.click()
-time.sleep(5)
+time.sleep(5)'''
+ver = pyautogui.locateCenterOnScreen(r'Verificado.png', confidence=0.9)
+print("coord ver:", ver)
+pyautogui.moveTo(ver, duration=0.3)
+pyautogui.click()
+time.sleep(2)
 
 #se inscrever
 btn_inscrever = pyautogui.locateCenterOnScreen(r"inscrever.png", confidence=0.9)
