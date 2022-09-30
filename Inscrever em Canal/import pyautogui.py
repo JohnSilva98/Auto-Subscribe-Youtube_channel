@@ -14,7 +14,7 @@ pyautogui.click()
 time.sleep(0.5)
 #caixa de pesquisa
 pesquisar = pyautogui.prompt(text="", title="Digite o nome do canal")
-# abrir nova guia
+# abrir nova guia1111111111111111111111
 time.sleep(1)
 pyautogui.click(556,22)
 pyautogui.hotkey('ctrl', 't')
